@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://ceshi.kanwokanwo.com/niit -->
+<html lang="en" class=" js no-touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>华威大学 University of Warwick | 看我看我</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="stylesheet" type="text/css" href="./niit_files/public.css">
+    <link rel="stylesheet" type="text/css" href="./niit_files/frame.css">
+    <link rel="stylesheet" type="text/css" href="./niit_files/jquery-rebox.css">
+    <link rel="stylesheet" type="text/css" href="./niit_files/video-js.css">
+    <link rel="stylesheet" type="text/css" href="./niit_files/school.css">
+</head>
+<body class="china">
+<style type="text/css">
+    .line {
+        margin-bottom: 20px;
+    }
+
+    /* 复制提示 */
+    .copy-tips {
+        position: fixed;
+        z-index: 99999;
+        bottom: 50%;
+        left: 50%;
+        margin: 0 0 -20px -80px;
+        background-color: rgba(0, 0, 0, 0.2);
+        filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);
+        padding: 6px;
+    }
+
+    .copy-tips-wrap {
+        padding: 10px 20px;
+        text-align: center;
+        border: 1px solid #F4D9A6;
+        background-color: #FFFDEE;
+        font-size: 14px;
+    }
+
+    .login_sf {
+        float: right;
+        position: relative;
+        margin-top: 2%;
+    }
+
+    .icon_wb {
+        background: url(/images/wbqq.png) no-repeat left top;
+        width: 53px;
+        height: 54px;
+    }
+
+    .icon_qq {
+        background: url(/images/wbqq.png) no-repeat -73px top;
+        width: 53px;
+        height: 54px;
+        margin-left: 20px;
+    }
+
+    .icon_weixin {
+        background: url(/images/wbqq.png) no-repeat right top;
+        width: 53px;
+        height: 54px;
+        margin-left: 20px;
+    }
+
+    .login_sf a {
+        display: inline-block;
+    }
+
+    .login_title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1%;
+        font-size: 16px;
+    }
+
+    /*新版菜单栏 2016.4.25*/
+    .show-for-large-menu a {
+        display: inline-block;
+        width: 130px;
+        height: 75px;
+        line-height: 25px;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .show-for-large-menu a:hover, .show-for-large-menu a.active {
+        border-bottom: 2px solid #1bb38c;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 1300px) {
+        .navbar-brand {
+            /*margin-right: 140px;*/
+        }
+    }
+
+    .show-for-small-menu {
+        display: none;
+    }
+    .show-for-large-menu{
+        display: inline-block;      /*原因是导航栏右侧主页按钮布局错位*/
+        /*display: block;*/
+    }
+
+    /*959宽隐藏student和school显示三道杠 large-menu隐藏 small-menu显示*/
+    @media (max-width: 959px) {
+        .not-login {
+            display: none;
+        }
+
+        .nav-center {
+            display: block !important;
+        }
+
+        .show-for-large-menu {
+            display: none;
+        }
+
+        /*.show-for-small-menu {*/
+        /*float: right;*/
+        /*display: block;*/
+        /*width: 80px;*/
+        /*max-width:959px;*/
+        /*height: 100%;*/
+        /*position: relative;*/
+        /*background: #1bb38c;*/
+        /*text-align: center;*/
+        /*}*/
+
+        .show-for-small-menu {
+            width: 100%;
+            max-width:959px;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            background: #1bb38c;
+            text-align: center;
+            display: none;
+        }
+
+        .click-dropdown a {
+            display: inline-block;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .click-show {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            display: none;
+        }
+
+        .click-show a {
+            display: block;
+            width: 130px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fff;
+            background: #2f312e;
+        }
+
+        .click-show a.active {
+            background: #1bb38c;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        .navbar-search-input {
+            width: 130px !important;
+        }
+
+        .show-for-large-menu a {
+            width: 90px;
+        }
+        .navbar-section > li{
+            width: 106px;
+        }
+
+    }
+
+    @media screen and (max-width: 1100px) {
+        .show-for-large-menu a {
+            width: 80px;
+            font-size: 13px;
+        }
+        .navbar-section > li{
+            width: 110px;
+        }
+        .navbar-section > li span{
+            font-size: 13px;
+        }
+
+    }
+
+    @media (max-width: 1089px) {
+        .navbar-search-input {
+            width: 70px !important;
+            font-size: 12px;
+        }
+        .navbar-section > li{
+            width: 100px
+        }
+        .navbar-section > li span{
+            font-size: 12px;
+        }
+    }
+
+    @media ( max-width: 593px) {
+        .navbar-search-input {
+            width: 130px !important;
+        }
+    }
+
+    @media ( max-width: 539px) {
+        .navbar-search-input {
+            width: 100px !important;
+        }
+    }
+
+    @media ( max-width: 520px) {
+        .navbar-search-input {
+            width: 56px !important;
+        }
+        .navbar-section li{
+            width:60px;
+        }
+        .subnav-avatar-down{
+            width:90px;
+        }
+
+    }
+
+    @media ( max-width: 400px) {
+        .navbar-search-input {
+            width: 22px !important;
+        }
+        .nav-center{
+            margin-left: 10px;
+        }
+        .navbar-section{
+            margin-right: 10px;
+        }
+        .navbar-section li{
+            width:40px;
+        }
+        .subnav-avatar-down{
+            width:90px;
+        }
+    }
+
+    @media ( max-width: 330px) {
+        .navbar-search-input {
+            width: 8px !important;
+        }
+        .navbar-brand {
+            margin-right: 0px;
+        }
+    }
+
+    select#adregisterSchoolCountry {
+        width: 50%;
+        height: 40px;
+    }
+   /* 清除导航文字下划线*/
+    .show-for-large-menu a{
+        text-decoration: none;
+    }
+
+    .field ul li {
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 10px;
+        margin: 5px 10px;
+        font-size: 14px;
+        color: #48d3f7;
+        border-radius: 30px;
+        border: 1px solid #48d3f7;
+        cursor: pointer;
+    }
+</style>
+<div class="md-overlay"></div>
+
+<script src="./niit_files/jquery-2.2.1.min.js"></script>
+<script src="./niit_files/jquery.zclip.js"></script>
+<script src="./niit_files/modalEffects_jquery.js"></script>
+<script src="./niit_files/underscore-min.js"></script>
+<script type="text/javascript" src="./niit_files/jquery.jcshare.js"></script>
+<script type="text/javascript" src="./niit_files/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="./niit_files/top.js"></script>
+<script>
+   /* $(function () {
+        $(window).resize(function(){
+            var clintW=$(window).width()；
+            if(clintW<1650){
+                $('.nav-center').css('marginLeft','2px');
+                $('.navbar ul').css('marginRight','2px');
+            }else {
+                $('.nav-center').css('marginLeft','50px');
+                $('.navbar ul').css('marginRight','50px');
+            }
+        })
+    })*/
+ /*解决高亮显示bug*/
+   function addLine(pageText,firstpage,pageId) {
+       var URLText=window.location.href;
+       if(URLText.indexOf(pageText)>-1) {
+           $(firstpage).css("border-bottom", "none");
+           $(pageId).css("border-bottom", "2px solid #1bb38c");
+           $(firstpage).hover(function () {
+               $(firstpage).css("border-bottom", "2px solid #1bb38c");
+           }, function () {
+               $(firstpage).css("border-bottom", "none");
+           })
+       }
+   }
+   addLine("specialization","#student-Page","#slist");
+   addLine("userItem","#student-Page","#slist");
+   addLine("myReservation","#student-Page","#slist");
+   addLine("profile","#student-Page","#partners");
+
+</script>
+<!-- <nav class="navbar navbar-default"> -->
+<!--   <div class="container-fluid"> -->
+<!--     <div class="navbar-header"> -->
+<!--       <a class="navbar-brand" href="<%= root_path %>"> -->
+<!--       </a> -->
+<!--     </div> -->
+<!--     <div class="collapse navbar-collapse"> -->
+<!--       <ul class="nav navbar-nav navbar-right"> -->
+<!--         <li class='active' style="float:left"> -->
+<!--           <a style="color:white" href="<%= root_path %>">中文</a> -->
+<!--           <span style="color:white"> |</span> -->
+<!--         </li> -->
+<!--       <li class='' style="float:left"> -->
+<!--           <a style="color:white" href="<%= root_path %>?localize=en">英文</a> -->
+<!--           <span style="color:white"> |</span> -->
+<!--         </li> -->
+<!--       <li class='' style="float:left"> -->
+<!--           <a style="color:white;display:inline" href="<%= root_path %>?localize=indonesia">印尼文</a> -->
+<!--           <span style="color:white"> |</span> -->
+<!--         </li> -->
+<!--       <li class='' style="float:left"> -->
+<!--           <a style="color:white;display:inline" href="<%= root_path %>?localize=malaysia">马来文</a> -->
+<!--         </li> -->
+<!--       </ul> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </nav> -->
+
+<section class="container-fluid main clearfix">
+  <div class="bg_pic">
+    <div class="black_box"></div>
+    <img src="./img/warwick_banner.jpg" data-modal="modal-schoolbgimg">
+    <div id="schoolNameAndRank">
+      <div class="school-avatar" id="myAvatarParent">
+        <img src="./img/warwick.jpeg" id="avatarSrc">
+      </div>
+      <a href="javascript:;" class="school_name">华威大学 University of Warwick</a>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-lg-3 col-xs-12 sidebar">
+      <div id="biography" class="introduce cu-no">
+        <ul>
+          <li><strong>所在地区</strong><span>英格兰</span></li>
+          <li><strong>所在城市</strong><span>考文垂</span></li>
+          <li><strong>学校网址</strong><span>
+              <a class="biography-a" target="_blank" href="http://www2.warwick.ac.uk/"><em>http://www2.warwick.ac.uk/</em></a>
+          </span></li>
+          <li><strong>TIMES排名</strong><span>6</span></li>
+          <li><strong>全球QS排名</strong><span>48</span></li>
+          <li><strong>建校时间</strong><span>1965</span></li>
+          <li><strong>在校人数</strong><span>17,000</span></li>
+          <li><strong>校园面积</strong><span>1360亩</span></li>
+          <li><strong>雅思成绩（本科/硕士）</strong><span>6/6.5</span></li>
+          <li><strong>国际生比例</strong><span>23%</span></li>
+          <li><strong>师生比例</strong><span>1:14.5</span></li>
+          <li><strong>学费</strong><span>16,000英镑</span></li>
+          <li><strong>就业率</strong><span>92%</span></li>
+          <li><strong>学校类型</strong><span>综合类/公立</span></li>
+          <li><strong>学位设置</strong><span>本科/硕士/博士</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-9  main_content">
+      <ul class="navbar_is">
+        <li class="school_btn tab-show" id="school_btn" style="width:100%">
+          <a href="files/南京工业职业技术学院外籍学生申请表20170504.pdf" id="school_word">点击申请</a>
+        </li>
+      </ul>
+      <div id="informationPage" class="information_page" style="display: none;">
+        <div class="view-information-page-form clearfix" style="width: 100%;margin-left: 10%;margin-top: 10%;"></div>
+        <ul class="information_record" id="informationList">
+
+        </ul>
+
+      </div>
+      <!-- myschool -->
+      <div id="infomationSchoolPage" class="school_page hide" style="display: block;">
+        <div class="content-container col-lg-9 col-md-9 col-xs-12">
+          <div class="my-story-container">
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>学校简介</h1>
+                </div>
+                <section class="col-xs-12">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>
+                  英国华威大学（University of Warwick）是一所校园式大学，创建于1965年，现有超过17000名学生及4000多名教职人员，学生中有来自100多个国家的超过4000名的国际留学生。作为一所年轻的大学，华威大学在英国乃至全球都享有良好的学术声誉，自英国媒体有大学排名以来，华威大学一直稳居前十名。而近年来一直都保持在全英前十所之前五顶尖高校的行列。</p>
+                    </div></div></div></div>
+
+                    <center><img class="img-responsive" src="img/warwick_name.png"><br></center>
+                  <center><img class="img-responsive" src="img/warwick_campus.jpg"><br></center>
+                  <p class="text-center">校园巡礼</p>
+                  <div class="media-item flex-video myVideoMedia text-center">
+
+                    <video class="video-js vjs-default-skin" controls="" preload="none" poster="/img/video_1.png" data-setup="{}">
+                      <source src="./videos/campustour.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </section>
+                <section class="col-xs-12">
+                  <p class="text-center">国际教育</p>
+                  <div class="media-item flex-video myVideoMedia text-center">
+
+                    <video class="video-js vjs-default-skin" controls="" preload="none" poster="/img/video_2.png" data-setup="{}">
+                      <source src="./videos/internationalstudents.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </section>
+                <section class="col-xs-12">
+                  <p class="text-center">校园生活</p>
+                  <div class="media-item flex-video myVideoMedia text-center">
+
+                    <video class="video-js vjs-default-skin" controls="" preload="none" poster="/img/video_3.png" data-setup="{}">
+                      <source src="./videos/campuslife.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>王牌专业</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>
+                              <div class="field">
+                                <ul>
+                                  <li>
+                                    土木工程
+                                  </li>
+                                  <li>
+                                    一般工程
+                                  </li>
+                                  <li>
+                                    会计和金融
+                                  </li>
+                                  <li>
+                                    经济学
+                                  </li>
+                                  <li>
+                                    商科
+                                  </li>
+                                  <li>
+                                    美国研究
+                                  </li>
+                                  <li>
+                                    经典和古代历史
+                                  </li>
+                                  <li>
+                                    通信及传媒研究
+                                  </li>
+                                  <li>
+                                    英语
+                                  </li>
+                                  <li>
+                                    法语
+                                  </li>
+                                  <li>
+                                    德语
+                                  </li>
+                                  <li>
+                                    历史
+                                  </li>
+                                  <li>
+                                    意大利语
+                                  </li>
+                                  <li>
+                                    社会学
+                                  </li>
+                                  <li>
+                                    戏剧和舞蹈
+                                  </li>
+                                  <li>
+                                    化学
+                                  </li>
+                                  <li>
+                                    数学
+                                  </li>
+                                </ul>
+                              </div>
+                        </p></div></div>
+                    </div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>学校特色</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>
+                              学校有在全英甚至全欧洲都享有很高声誉的学生会，近180个社团和70多个体育俱乐部；有学生自行创编的电台、电视台和报社；有伦敦外最大的大学艺术中心—华威艺术中心（有剧院、音乐厅、影院、艺术馆、雕塑馆等），还有旅游与保险办事处及健康中心等；同时，学校还为学生提供了优良的室内外运动设施，包括宽阔的体育场、网球馆、灯光球场、塑胶跑道；运动中心设有两个25米标准室内游泳池、壁球馆、设备齐全的健身中心和室内攀岩中心等。
+                              <br><br>
+                              <img class="img-responsive" src="img/campus_1.jpg">
+<br><br>
+                              <img class="img-responsive" src="img/campus_2.jpg">
+<br><br>
+                              <img class="img-responsive" src="img/campus_3.jpg">
+<br><br>
+                              <img class="img-responsive" src="img/campus_4.jpg">
+<br><br>
+                              <img class="img-responsive" src="img/campus_5.jpg">
+                        </p></div></div>
+                    </div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>学校历史</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>
+                              华威大学（The University of Warwick，又译：沃芮克大学）于1961年通过英国政府批准建立，1963年 ，与当时建立的另外六所大学（UEA, Essex, Kent, Lancaster, Sussex, York) 因其现代建筑设计，在钢或混凝土结构中广泛使用平板玻璃，与以维多利亚建筑风格为主的红砖大学和更古老的古典大学形成鲜明对照被合称作Plate Glass University。时任考文垂教区主教Cuthbert Bardsley将大学命名为the University of Warwick. <br><br>
+                              <img class="img-responsive" src="img/city_1.jpg"><br><br>
+1965年华威大学获得英国皇家特许状，1979年合并了考文垂教育学院。2006年6月，华威医学院（Warwick Medical School）在考文垂建立了大学医院（University Hospital Coventry）作为临床医学研究的基地。2007年，华威医学院成为全英首家和英国医学研究委员会建立战略合作的医学院。2013年9月，华威大学宣布工程制造学院（WMG）将建造英国汽车创新中心(National Automotive Innovation Centre)，这一项目将于2017年完工。2015年年初，华威大学宣布将在美国加利福尼亚建造华威大学加利福尼亚校区。<br><br>
+                              <img class="img-responsive" src="img/city_2.jpg"><br><br>
+该校拥有众多海外留学生，是一所相当具有国际化风范的大学。华威大学校史虽与其他英国大学相比虽不长，但在英国、欧洲、全球等皆已建立起其优越的学术名望。2011年校报The Boar更因The Guardian(卫报)于当年发布的大学排名而创造了Woxbridge一词，意指华威大学、牛津大学、剑桥大学三所大学三强鼎立。华威大学也是英国除牛剑之外唯一一所从未跌出排名前十的大学。<br><br>
+                              <img class="img-responsive" src="img/city_3.jpg"><br><br>
+华威大学在2008年加入素有英国常春藤的罗素大学集团，在国际间的声誉即排名也十分响亮，在2014年英国政府组织的官方RAE科学研究水准评估中，位居全英第7位，在2014年QS世界大学排名中全球年轻优秀五十大名校排名第3名，2014年QS世界大学排名中排名全球第61名，2015年泰晤士高等教育世界声誉排名全球排名第81-90名，2014年泰晤士高等教育世界大学排名全球排名第103名。<br><br>
+                              <img class="img-responsive" src="img/city_4.jpg"><br><br>
+                              校训：Mens agitat molem（精神凌驾物质）<br><br> <img class="img-responsive" src="img/city_5.jpg">
+                        </p></div></div>
+                    </div></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>学校住宿</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>华威大学宿舍从硬件到服务都属于全英一流，每周有专人打扫。最新的宿舍例如分别完工于11年和12年的Bluebell和Sherbourne配备了时下最先进的设备，例如电子门禁锁、免费的50MB每秒的WiFi。其中Bluebell更是以配备奢华的落地窗和双人床而闻名。<br><br> <img class="img-responsive" src="img/accommodation_1.jpg"><br><br> <img class="img-responsive" src="img/accommodation_2.jpg"><br><br> <img class="img-responsive" src="img/accommodation_3.jpg"><br><br> <img class="img-responsive" src="img/accommodation_4.jpg"><br><br> <img class="img-responsive" src="img/accommodation_5.jpg">
+                        </p></div></div>
+                    </div></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>地理位置</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>华威大学坐落在英格兰中部城市考文垂市郊，距离市中心约5公里。学校有巴士直通考文垂及莱明顿温泉镇(Leamington Spa)；乘坐维珍火车（Virgin Train）1个小时到达伦敦，London Midland火车约为1小时40分；20分钟可到达伯明翰(Birmingham New Street)。<br><br>除了位于大学内的主校园，华威大学商学院在全欧洲最高的建筑——碎片大厦（The Shard）开设华威商学院伦敦校区，现在开设人力资源、金融的非全日制硕士课程 ，以及MBA的全日制和非全日制硕士课程。<br><br> 此外，国际化的华威大学将在美国加利福尼亚开设华威大学加州校区。此校区将从2017年正式招收硕士生，并逐步招收本科学生。2031年新校区将容纳包括4500名本科生和1500名研究生在内的共6000名学生。
+                        <br><br> <img class="img-responsive" src="img/warwick_map.png"></p></div></div>
+                    </div></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="clearfix">
+                <div class="col-lg-12 col-xs-12">
+                  <h1>报名申请</h1>
+                </div>
+              </div>
+              <div class="columns-info">
+                <div class="bg-gray">
+                  <div class="clearfix myschoolMedia media-item relative-position" data-module="MYSCHOOL">
+                    <div class="description"><div>
+                        <div class="col-lg-12 col-xs-12 disabled"><div class="media-item-description"><p>
+                              <img class="img-responsive" src="img/application_form.png"><br>
+                            </p>
+      <ul class="navbar_is">
+        <li class="school_btn tab-show" id="school_btn" style="width:100%">
+          <a href="files/warwick-application.pdf" id="school_word">点击申请</a>
+        </li>
+      </ul>
+
+                        </div></div>
+                    </div></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<link rel="stylesheet" type="text/css" href="./niit_files/bottom.css">
+<footer class="clearfix">
+      <span>
+  <div class="row">
+    <div class="col-md-12">
+        © 2017.看我看我<br>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="./niit_files/video.js"></script>
+<script src="./niit_files/jquery.scrollTo.js"></script>
+<script src="./niit_files/modernizr.custom.js"></script>
+<script src="./niit_files/jquery.ajaxfileupload.js"></script>
+<script src="./niit_files/xss.js"></script>
+<script src="./niit_files/jquery-rebox.js"></script>
+<script src="./niit_files/backbone-min.js"></script>
+<script src="./niit_files/backbone.marionette.min.js"></script>
+<script src="./niit_files/jquery-ui.min.js"></script>
+<script src="./niit_files/jquery.sortable.js"></script>
+<script src="./niit_files/video-popup.js"></script><div class="popup_video_div"><div class="popup-vertical-center"><div class="popup-horizontal-center"><div id="video-obj" class="video-js vjs-default-skin vjs-paused vjs-controls-enabled vjs-user-inactive" style="width: 100%; height: 100%;"><video class="vjs-tech" id="video-obj_html5_api" preload="none" poster="" data-setup="{}"><source src="" type="video/mp4"></video><div></div><div class="vjs-poster" tabindex="-1" style="display: none;"></div><div class="vjs-text-track-display"></div><div class="vjs-loading-spinner"></div><div class="vjs-big-play-button" role="button" aria-live="polite" tabindex="0" aria-label="play video"><span aria-hidden="true"></span></div><div class="vjs-control-bar"><div class="vjs-play-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Play</span></div></div><div class="vjs-current-time vjs-time-controls vjs-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time </span>0:00</div></div><div class="vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-controls vjs-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time </span>0:00</div></div><div class="vjs-remaining-time vjs-time-controls vjs-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time </span>-0:00</div></div><div class="vjs-progress-control vjs-control"><div role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-progress-holder vjs-slider" aria-label="video progress bar" aria-valuetext="0:00"><div class="vjs-load-progress"><span class="vjs-control-text">Loaded: 0%</span></div><div class="vjs-play-progress" style="width: 0%;"><span class="vjs-control-text">Progress: 0%</span></div><div class="vjs-seek-handle vjs-slider-handle" aria-live="off" style="left: 0%;"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-fullscreen-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Fullscreen</span></div></div><div class="vjs-volume-control vjs-control"><div role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-volume-bar vjs-slider" aria-label="volume level" aria-valuetext="100%"><div class="vjs-volume-level" style="width: 100%;"><span class="vjs-control-text"></span></div><div class="vjs-volume-handle vjs-slider-handle" style="left: 100%;"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-mute-control vjs-control" role="button" aria-live="polite" tabindex="0"><div><span class="vjs-control-text">Mute</span></div></div><div class="vjs-subtitles-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Subtitles Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Subtitles</span></div><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">subtitles off</li></ul></div></div><div class="vjs-captions-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Captions Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Captions</span></div><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">captions off</li></ul></div></div><div class="vjs-chapters-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Chapters Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Chapters</span></div><div class="vjs-menu"><ul class="vjs-menu-content"></ul><li class="vjs-menu-title">Chapters</li></div></div></div></div><button class="md-close"><i class="glyphicon glyphicon-remove"></i></button></div></div></div>
+<script src="./niit_files/splitpageNew2.js"></script>
+
+<script type="text/javascript" src="./niit_files/school-viewprofile.js"></script>
+<script src="./niit_files/school.js"></script>
+<script src="./niit_files/school.view.js"></script>
+
+
+</body></html>
